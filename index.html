@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dorine's Jewel | Premium Handcrafted Jewelry</title>
+    <meta name="description"
+        content="Discover exquisite, handcrafted jewelry at Dorine's Jewel. Wear a piece of nature, frozen in time.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header class="main-header">
+        <nav>
+            <div class="logo">
+                <img src="images/WhatsApp Image 2026-01-21 at 12.34.14 PM.jpeg" alt="Dorine's Jewel Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span>Nature.</span>
+                    <span>Frozen.</span>
+                    <span>In Time.</span>
+                </h1>
+                <p class="hero-subtitle">Handcrafted Resin Jewelry for the Elegant Soul</p>
+                <a href="#collections" class="cta-button">Explore Collection</a>
+            </div>
+            <div class="hero-image-container">
+                <img src="images/Screenshot 2026-02-10 165751.png" alt="Hero Background" class="hero-bg">
+            </div>
+        </section>
+
+        <section id="collections" class="showcase">
+            <h2 class="section-title">Latest Treasures</h2>
+            <div class="gallery-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-image="images/WhatsApp Image 2026-01-21 at 2.24.02 PM.jpeg">
+                    <img src="images/WhatsApp Image 2026-01-21 at 2.24.02 PM.jpeg" alt="Golden Ember">
+                    <div class="card-info">
+                        <h3>Golden Ember</h3>
+                        <p>Resin & Gold Leaf</p>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card" data-image="images/WhatsApp Image 2026-01-21 at 2.27.33 PM.jpeg">
+                    <img src="images/WhatsApp Image 2026-01-21 at 2.27.33 PM.jpeg" alt="Crystal Clarity">
+                    <div class="card-info">
+                        <h3>Crystal Clarity</h3>
+                        <p>Quartz & Silver</p>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card" data-image="images/Screenshot 2026-02-10 165751.png">
+                    <img src="images/Screenshot 2026-02-10 165751.png" alt="Midnight Drop">
+                    <div class="card-info">
+                        <h3>Midnight Drop</h3>
+                        <p>Dark Resin Series</p>
+                    </div>
+                </div>
+                <!-- Additional Images -->
+                <div class="product-card" data-image="images/WhatsApp Image 2026-01-21 at 2.19.39 PM.jpeg">
+                    <img src="images/WhatsApp Image 2026-01-21 at 2.19.39 PM.jpeg" alt="Nature's Embrace">
+                    <div class="card-info">
+                        <h3>Nature's Embrace</h3>
+                        <p>Floral Collection</p>
+                    </div>
+                </div>
+                <div class="product-card" data-image="images/WhatsApp Image 2026-01-21 at 2.26.34 PM.jpeg">
+                    <img src="images/WhatsApp Image 2026-01-21 at 2.26.34 PM.jpeg" alt="Ocean Whisper">
+                    <div class="card-info">
+                        <h3>Ocean Whisper</h3>
+                        <p>Blue Series</p>
+                    </div>
+                </div>
+                <div class="product-card" data-image="images/WhatsApp Image 2026-01-21 at 2.27.52 PM.jpeg">
+                    <img src="images/WhatsApp Image 2026-01-21 at 2.27.52 PM.jpeg" alt="Timeless Gold">
+                    <div class="card-info">
+                        <h3>Timeless Gold</h3>
+                        <p>Classic Collection</p>
+                    </div>
+                </div>
+                <div class="product-card" data-image="images/Screenshot 2026-02-10 164943.png">
+                    <img src="images/Screenshot 2026-02-10 164943.png" alt="Ethereal Glow">
+                    <div class="card-info">
+                        <h3>Ethereal Glow</h3>
+                        <p>Limited Edition</p>
+                    </div>
+                </div>
+                <div class="product-card" data-image="images/Screenshot 2026-02-10 165004.png">
+                    <img src="images/Screenshot 2026-02-10 165004.png" alt="Amber Soul">
+                    <div class="card-info">
+                        <h3>Amber Soul</h3>
+                        <p>Vintage Style</p>
+                    </div>
+                </div>
+                <div class="product-card" data-image="images/Screenshot 2026-02-10 165745.png">
+                    <img src="images/Screenshot 2026-02-10 165745.png" alt="Pure Essence">
+                    <div class="card-info">
+                        <h3>Pure Essence</h3>
+                        <p>Natural Elements</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="about-section">
+            <div class="about-content">
+                <h2>The Art of Preservation</h2>
+                <p>Every piece at Dorine's Jewel is a labor of love, capturing the fleeting beauty of nature and
+                    preserving it forever in crystal-clear resin.</p>
+                <div class="social-links" style="margin-top: 2rem;">
+                    <a href="https://www.instagram.com/dorinesjewel/" target="_blank" class="instagram-link">
+                        <span>Follow us on Instagram</span>
+                        <!-- Simple SVG Icon for Instagram -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-instagram">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dorine's Jewel. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+:root {
+    --color-bg: #0f0f0f;
+    --color-text: #f0f0f0;
+    --color-gold: #d4af37;
+    /* Classic Gold */
+    --color-accent: #c2185b;
+    /* Deep Pink/Red from logo */
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Lato', sans-serif;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    cursor: none;
+    /* For custom cursor */
+    position: relative;
+}
+
+/* Custom Cursor */
+.cursor {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--color-gold);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s;
+}
+
+.cursor-follower {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* Header */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(15, 15, 15, 0.9), transparent);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    /* Adjust size as needed */
+    width: auto;
+    border-radius: 50%;
+    /* Make it circular */
+    mix-blend-mode: multiply;
+    /* Attempt to blend background */
+    /* If multiply makes it too dark on dark bg, we might need a white glow or different mode */
+    /* Alternatively, simpler opacity if blend mode fails */
+    /* opacity: 0.9; */
+    border: 2px solid var(--color-gold);
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-md);
+    list-style: none;
+}
+
+.nav-links a:hover {
+    color: var(--color-gold);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-title span {
+    display: block;
+    background: linear-gradient(45deg, var(--color-gold), #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.8;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-gold);
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    /* dim it so text pops */
+    filter: blur(2px);
+    /* nice depth effect */
+    transform: scale(1.1);
+    /* slight zoom for parallax later */
+}
+
+/* Showcase Grid */
+.showcase {
+    padding: var(--spacing-lg);
+    min-height: 100vh;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-accent);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.product-card {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    /* Subtle gold border */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    /* Gold glow */
+    border-color: var(--color-gold);
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .card-info {
+    transform: translateY(0);
+}
+
+.card-info h3 {
+    color: var(--color-gold);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Instagram Link */
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text);
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.instagram-link:hover {
+    background: var(--color-accent);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(194, 24, 91, 0.4);
+}
+
+.instagram-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Footer & About */
+.about-section {
+    padding: var(--spacing-lg);
+    text-align: center;
+    background: #151515;
+}
+
+footer {
+    padding: var(--spacing-md);
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    border-top: 1px solid #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        background: rgba(15, 15, 15, 0.95);
+        /* More solid background */
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .product-card {
+        height: 300px;
+        /* Shorter cards on mobile */
+    }
+
+    .logo img {
+        height: 60px;
+        /* Smaller logo */
+    }
+}
