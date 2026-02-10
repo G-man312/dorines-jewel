@@ -69,44 +69,17 @@ function animateParticles() {
 
 animateParticles();
 
-// Custom Cursor
-const cursor = document.querySelector('.cursor');
-const follower = document.querySelector('.cursor-follower');
 
-document.addEventListener('mousemove', (e) => {
-    gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0, ease: 'power2.out' });
-    gsap.to(follower, { x: e.clientX, y: e.clientY, duration: 0.2, ease: 'power2.out' });
-});
-
-// Hover effects for cursor
-const links = document.querySelectorAll('a, .product-card');
-links.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-        gsap.to(cursor, { scale: 1.5, borderColor: 'transparent', backgroundColor: 'var(--color-gold)', duration: 0.3 });
-        gsap.to(follower, { scale: 1.5, duration: 0.3 });
-    });
-    link.addEventListener('mouseleave', () => {
-        gsap.to(cursor, { scale: 1, borderColor: 'var(--color-gold)', backgroundColor: 'transparent', duration: 0.3 });
-        gsap.to(follower, { scale: 1, duration: 0.3 });
-    });
-});
 
 // Hero Animations
 const tl = gsap.timeline();
 
-tl.from('.logo', {
+tl.from('.nav-links', {
     y: -50,
     opacity: 0,
     duration: 1,
     ease: 'power3.out'
 })
-    .from('.nav-links li', {
-        y: -50,
-        opacity: 0,
-        stagger: 0.1,
-        duration: 0.8,
-        ease: 'power3.out'
-    }, '-=0.5')
     .from('.hero-title', {
         y: 50,
         opacity: 0,
