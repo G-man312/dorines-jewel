@@ -107,19 +107,24 @@ tl.from('.logo', {
         duration: 0.8,
         ease: 'power3.out'
     }, '-=0.5')
-    .from('.hero-title span', {
-        y: 100,
+    .from('.hero-title', {
+        y: 50,
         opacity: 0,
-        stagger: 0.2,
-        duration: 1.2,
-        ease: 'power4.out'
+        duration: 1,
+        ease: 'power3.out'
     }, '-=0.5')
-    .from('.hero-subtitle', {
+    .from('.hero-subtitle-main', {
+        y: 30,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+    }, '-=0.8')
+    .from('.hero-description', {
         y: 20,
         opacity: 0,
         duration: 1,
         ease: 'power2.out'
-    }, '-=1')
+    }, '-=0.8')
     .from('.cta-button', {
         y: 20,
         opacity: 0,
